@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.motionlayoutsample.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_splashFragment3"
+            app:destination="@id/splashFragment3" />
+        <action
+            android:id="@+id/action_mainFragment_to_splashFragment2"
+            app:destination="@id/splashFragment2" />
+        <action
+            android:id="@+id/action_mainFragment_to_splash1Fragment"
+            app:destination="@id/splash1Fragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_splashFragment4"
+            app:destination="@id/splashFragment4" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.example.motionlayoutsample.ViewPagerFragment"
+        android:label="fragment_view_pager"
+        tools:layout="@layout/fragment_view_pager" />
+    <fragment
+        android:id="@+id/splash1Fragment"
+        android:name="com.example.motionlayoutsample.SplashFragment1"
+        android:label="fragment_splash1"
+        tools:layout="@layout/fragment_splash1" />
+    <fragment
+        android:id="@+id/splashFragment2"
+        android:name="com.example.motionlayoutsample.SplashFragment2"
+        android:label="fragment_splash2"
+        tools:layout="@layout/fragment_splash2" />
+    <fragment
+        android:id="@+id/splashFragment3"
+        android:name="com.example.motionlayoutsample.SplashFragment3"
+        android:label="fragment_splash3"
+        tools:layout="@layout/fragment_splash3" />
+    <fragment
+        android:id="@+id/splashFragment4"
+        android:name="com.example.motionlayoutsample.RecyclerFragment"
+        android:label="fragment_splash4"
+        tools:layout="@layout/fragment_recycler" />
+</navigation>

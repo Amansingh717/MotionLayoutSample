@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewPagerFragment">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top_30"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/motion_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layoutDescription="@xml/fragment_view_pager_scene"
+        app:layout_constraintBottom_toTopOf="@id/guideline_top_30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/background_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/image_morning_sun"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="32dp"
+            android:contentDescription="@string/desc_image_morning_sun"
+            android:src="@drawable/ic_baseline_day"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/image_noon_sun"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/desc_image_noon_sun"
+            android:src="@drawable/ic_baseline_day"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/image_noon_cloud_1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="8dp"
+            android:contentDescription="@string/desc_image_noon_sun"
+            android:src="@drawable/ic_baseline_cloud"
+            app:layout_constraintEnd_toStartOf="@id/image_noon_sun"
+            app:layout_constraintTop_toTopOf="@id/image_noon_sun" />
+
+        <ImageView
+            android:id="@+id/image_noon_cloud_2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="8dp"
+            android:contentDescription="@string/desc_image_noon_sun"
+            android:src="@drawable/ic_baseline_cloud"
+            app:layout_constraintBottom_toBottomOf="@id/image_noon_sun"
+            app:layout_constraintStart_toEndOf="@id/image_noon_sun" />
+
+
+        <ImageView
+            android:id="@+id/image_eve_moon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp"
+            android:contentDescription="@string/desc_image_eve_moon"
+            android:src="@drawable/ic_baseline_night"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top_30" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

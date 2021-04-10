@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_recycler_item"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    app:cardCornerRadius="4dp">
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/container_recycler_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/custom_recycler_item_scene">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/image_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:layoutDescription="@string/recycler_view"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:saturation="0" />
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+</androidx.cardview.widget.CardView>

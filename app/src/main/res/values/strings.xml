@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MotionLayoutSample</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="splash_1">Splash 1</string>
+    <string name="splash_2">Splash 2</string>
+    <string name="splash_3">Splash 3</string>
+    <string name="recycler_view">RecyclerView</string>
+    <string name="view_pager">ViewPager2</string>
+    <string name="morning">Hi there, Good Morning!!</string>
+    <string name="noon">Hi there, Good Noon!!</string>
+    <string name="evening">Hi there, Good Evening!!</string>
+    <string name="desc_image_noon_sun">desc_image_noon_sun</string>
+    <string name="desc_image_morning_sun">desc_image_morning_sun</string>
+    <string name="desc_image_eve_moon">desc_image_eve_moon</string>
+</resources>

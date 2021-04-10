@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint android:id="@+id/guideline_top_30" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@id/guideline_top_30" />
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start">
+        <KeyFrameSet>
+            <!--            morning sun-->
+            <KeyAttribute
+                android:alpha="1"
+                app:framePosition="0"
+                app:motionTarget="@+id/image_morning_sun" />
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="50"
+                app:motionTarget="@+id/image_morning_sun" />
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="100"
+                app:motionTarget="@+id/image_morning_sun" />
+
+            <!--            noon sun-->
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="0"
+                app:motionTarget="@+id/image_noon_sun" />
+            <KeyAttribute
+                android:alpha="1"
+                app:framePosition="50"
+                app:motionTarget="@+id/image_noon_sun" />
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="100"
+                app:motionTarget="@+id/image_noon_sun" />
+
+            <!--            noon cloud 1-->
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="0"
+                app:motionTarget="@+id/image_noon_cloud_1" />
+            <KeyAttribute
+                android:alpha="1"
+                app:framePosition="50"
+                app:motionTarget="@+id/image_noon_cloud_1" />
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="100"
+                app:motionTarget="@+id/image_noon_cloud_1" />
+
+            <!--            noon cloud 2-->
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="0"
+                app:motionTarget="@+id/image_noon_cloud_2" />
+            <KeyAttribute
+                android:alpha="1"
+                app:framePosition="50"
+                app:motionTarget="@+id/image_noon_cloud_2" />
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="100"
+                app:motionTarget="@+id/image_noon_cloud_2" />
+
+
+            <!--            evening moon-->
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="0"
+                app:motionTarget="@+id/image_eve_moon" />
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="50"
+                app:motionTarget="@+id/image_eve_moon" />
+            <KeyAttribute
+                android:alpha="1"
+                app:framePosition="100"
+                app:motionTarget="@+id/image_eve_moon" />
+
+            <!--            background image-->
+            <KeyAttribute
+                app:framePosition="0"
+                app:motionTarget="@+id/background_view">
+                <CustomAttribute
+                    app:attributeName="backgroundColor"
+                    app:customColorValue="@color/color_morning" />
+            </KeyAttribute>
+            <KeyAttribute
+                app:framePosition="50"
+                app:motionTarget="@+id/background_view">
+                <CustomAttribute
+                    app:attributeName="backgroundColor"
+                    app:customColorValue="@color/color_noon" />
+            </KeyAttribute>
+            <KeyAttribute
+                app:framePosition="100"
+                app:motionTarget="@+id/background_view">
+                <CustomAttribute
+                    app:attributeName="backgroundColor"
+                    app:customColorValue="@color/color_evening" />
+            </KeyAttribute>
+        </KeyFrameSet>
+    </Transition>
+</MotionScene>
